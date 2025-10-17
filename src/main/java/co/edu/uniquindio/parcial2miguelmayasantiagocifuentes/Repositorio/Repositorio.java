@@ -4,13 +4,14 @@ package co.edu.uniquindio.parcial2miguelmayasantiagocifuentes.Repositorio;
 
 import co.edu.uniquindio.parcial2miguelmayasantiagocifuentes.Model.Factory;
 import co.edu.uniquindio.parcial2miguelmayasantiagocifuentes.Model.Inmueble;
+import co.edu.uniquindio.parcial2miguelmayasantiagocifuentes.Model.InmuebleComponent;
 
 import java.util.ArrayList;
 
 public class Repositorio {
 
     private static Repositorio instancia;
-    private ArrayList<Inmueble> inmuebles;
+    private ArrayList<InmuebleComponent> inmuebles;
 
     private Repositorio() {
         inmuebles = new ArrayList<>();
@@ -30,19 +31,19 @@ public class Repositorio {
         inmuebles.add(inmueble1);
     }
 
-    public ArrayList<Inmueble> getInmuebles() {
+    public ArrayList<InmuebleComponent> getInmuebles() {
         return inmuebles;
     }
 
-    public void agregarInmueble(Inmueble inmueble) {
+    public void agregarInmueble(InmuebleComponent inmueble) {
         inmuebles.add(inmueble);
     }
 
-    public boolean eliminarInmueble(Inmueble inmueble) {
+    public boolean eliminarInmueble(InmuebleComponent inmueble) {
         return inmuebles.remove(inmueble);
     }
 
-    public Inmueble buscarPorCiudad(String ciudad) {
+    public InmuebleComponent buscarPorCiudad(String ciudad) {
         return inmuebles.stream()
                 .filter(p -> p.getCiudad().equals(ciudad))
                 .findFirst()

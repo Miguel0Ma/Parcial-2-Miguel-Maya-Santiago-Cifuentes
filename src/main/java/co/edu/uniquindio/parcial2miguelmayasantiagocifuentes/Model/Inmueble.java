@@ -1,6 +1,6 @@
 package co.edu.uniquindio.parcial2miguelmayasantiagocifuentes.Model;
 
-public class Inmueble {
+public class Inmueble implements InmuebleComponent {
     private String tipo;
     private String ciudad;
     private String numHabitaciones;
