@@ -43,14 +43,4 @@ public class Repositorio {
         return inmuebles.remove(inmueble);
     }
 
-    public InmuebleComponent buscarPorCiudad(String ciudad) {
-        return inmuebles.stream()
-                .filter(p -> p.getCiudad().equals(ciudad))
-                .findFirst()
-                .orElse(null);
-    }
-
-    public int getCantidadInmuebles() {
-        return inmuebles.size();
-    }
 }
